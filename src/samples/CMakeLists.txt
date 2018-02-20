@@ -31,3 +31,6 @@ target_link_libraries(storage_sample googleapis_openssl_codec)
 endif()
 target_link_libraries(storage_sample ${GFLAGS_LIBRARY})
 target_link_libraries(storage_sample pthread)
+
+#this is the Gmail Inbox Project
+add_subdirectory(gmail_inbox)
