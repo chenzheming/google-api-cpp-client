@@ -1280,7 +1280,8 @@ util::Status UsersResource_MessagesResource_InsertMethod::AppendVariable(
 
 // Standard constructor.
 UsersResource_MessagesResource_ListMethod::UsersResource_MessagesResource_ListMethod(
-    const GmailService* _service_, client::AuthorizationCredential* _credential_, const StringPiece& user_id)
+    const GmailService* _service_, client::AuthorizationCredential* _credential_, const StringPiece& user_id,
+    const string *after, const string *before)
     : GmailServiceBaseRequest(
         _service_, _credential_,
         client::HttpRequest::GET,
@@ -1293,6 +1294,28 @@ UsersResource_MessagesResource_ListMethod::UsersResource_MessagesResource_ListMe
       _have_max_results_(false),
       _have_page_token_(false),
       _have_q_(false) {
+
+      string q;
+
+      if (nullptr != after)
+      {
+        q.append("after:") += *after;
+      }
+
+      if (nullptr != before)
+      {
+        if (!q.empty())
+        {
+          q.push_back(' ');
+        }
+
+        q.append("before:") += *before;
+      }
+
+      if (!q.empty())
+      {
+        set_q(q);
+      }
 }
 
 // Standard destructor.
@@ -2967,8 +2990,8 @@ UsersResource_MessagesResource_InsertMethod* GmailService::UsersResource::Messag
 }
 
 
-UsersResource_MessagesResource_ListMethod* GmailService::UsersResource::MessagesResource::NewListMethod(client::AuthorizationCredential* _credential_, const StringPiece& user_id) const {
-  return new UsersResource_MessagesResource_ListMethod(service_, _credential_, user_id);
+UsersResource_MessagesResource_ListMethod* GmailService::UsersResource::MessagesResource::NewListMethod(client::AuthorizationCredential* _credential_, const StringPiece& user_id, const string *after, const string *before) const {
+  return new UsersResource_MessagesResource_ListMethod(service_, _credential_, user_id, after, before);
 }
 
 
