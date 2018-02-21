@@ -62,4 +62,17 @@ ListMessagesResponse::ListMessagesResponse(Json::Value* storage)
 // Standard destructor.
 ListMessagesResponse::~ListMessagesResponse() {
 }
+
+// Properties.
+
+const client::JsonCppArray<Message > ListMessagesResponse::get_messages() const {
+   const Json::Value& storage = Storage("messages");
+   return client::JsonValueToCppValueHelper<client::JsonCppArray<Message > >(storage);
+}
+
+client::JsonCppArray<Message > ListMessagesResponse::mutable_messages() {
+  Json::Value* storage = MutableStorage("messages");
+  return client::JsonValueToMutableCppValueHelper<client::JsonCppArray<Message > >(storage);
+}
+
 }  // namespace google_gmail_api
