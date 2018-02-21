@@ -118,7 +118,7 @@ GmailServiceBaseRequest::~GmailServiceBaseRequest() {
 }
 
 util::Status GmailServiceBaseRequest::AppendVariable(
-    const StringPiece& variable_name,
+    const string& variable_name,
     const client::UriTemplateConfig& config,
     string* target) {
   return client::StatusInvalidArgument(
@@ -201,7 +201,7 @@ UsersResource_GetProfileMethod::~UsersResource_GetProfileMethod() {
 
 
 util::Status UsersResource_GetProfileMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -230,7 +230,7 @@ UsersResource_StopMethod::~UsersResource_StopMethod() {
 
 
 util::Status UsersResource_StopMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -260,7 +260,7 @@ UsersResource_WatchMethod::~UsersResource_WatchMethod() {
 
 
 util::Status UsersResource_WatchMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -335,7 +335,7 @@ UsersResource_DraftsResource_CreateMethod::~UsersResource_DraftsResource_CreateM
 
 
 util::Status UsersResource_DraftsResource_CreateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -365,7 +365,7 @@ UsersResource_DraftsResource_DeleteMethod::~UsersResource_DraftsResource_DeleteM
 
 
 util::Status UsersResource_DraftsResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -411,7 +411,7 @@ util::Status UsersResource_DraftsResource_GetMethod::AppendOptionalQueryParamete
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_DraftsResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -478,7 +478,7 @@ util::Status UsersResource_DraftsResource_ListMethod::AppendOptionalQueryParamet
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_DraftsResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -550,7 +550,7 @@ UsersResource_DraftsResource_SendMethod::~UsersResource_DraftsResource_SendMetho
 
 
 util::Status UsersResource_DraftsResource_SendMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -624,7 +624,7 @@ UsersResource_DraftsResource_UpdateMethod::~UsersResource_DraftsResource_UpdateM
 
 
 util::Status UsersResource_DraftsResource_UpdateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -701,7 +701,7 @@ util::Status UsersResource_HistoryResource_ListMethod::AppendOptionalQueryParame
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_HistoryResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -732,7 +732,7 @@ UsersResource_LabelsResource_CreateMethod::~UsersResource_LabelsResource_CreateM
 
 
 util::Status UsersResource_LabelsResource_CreateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -762,7 +762,7 @@ UsersResource_LabelsResource_DeleteMethod::~UsersResource_LabelsResource_DeleteM
 
 
 util::Status UsersResource_LabelsResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -797,7 +797,7 @@ UsersResource_LabelsResource_GetMethod::~UsersResource_LabelsResource_GetMethod(
 
 
 util::Status UsersResource_LabelsResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -831,7 +831,7 @@ UsersResource_LabelsResource_ListMethod::~UsersResource_LabelsResource_ListMetho
 
 
 util::Status UsersResource_LabelsResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -862,7 +862,7 @@ UsersResource_LabelsResource_PatchMethod::~UsersResource_LabelsResource_PatchMet
 
 
 util::Status UsersResource_LabelsResource_PatchMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -898,7 +898,7 @@ UsersResource_LabelsResource_UpdateMethod::~UsersResource_LabelsResource_UpdateM
 
 
 util::Status UsersResource_LabelsResource_UpdateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -934,7 +934,7 @@ UsersResource_MessagesResource_BatchDeleteMethod::~UsersResource_MessagesResourc
 
 
 util::Status UsersResource_MessagesResource_BatchDeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -964,7 +964,7 @@ UsersResource_MessagesResource_BatchModifyMethod::~UsersResource_MessagesResourc
 
 
 util::Status UsersResource_MessagesResource_BatchModifyMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -994,7 +994,7 @@ UsersResource_MessagesResource_DeleteMethod::~UsersResource_MessagesResource_Del
 
 
 util::Status UsersResource_MessagesResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1050,7 +1050,7 @@ util::Status UsersResource_MessagesResource_GetMethod::AppendOptionalQueryParame
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_MessagesResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1170,7 +1170,7 @@ util::Status UsersResource_MessagesResource_ImportMethod::AppendOptionalQueryPar
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_MessagesResource_ImportMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1265,7 +1265,7 @@ util::Status UsersResource_MessagesResource_InsertMethod::AppendOptionalQueryPar
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_MessagesResource_InsertMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1337,7 +1337,7 @@ util::Status UsersResource_MessagesResource_ListMethod::AppendOptionalQueryParam
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_MessagesResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1368,7 +1368,7 @@ UsersResource_MessagesResource_ModifyMethod::~UsersResource_MessagesResource_Mod
 
 
 util::Status UsersResource_MessagesResource_ModifyMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1445,7 +1445,7 @@ UsersResource_MessagesResource_SendMethod::~UsersResource_MessagesResource_SendM
 
 
 util::Status UsersResource_MessagesResource_SendMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1475,7 +1475,7 @@ UsersResource_MessagesResource_TrashMethod::~UsersResource_MessagesResource_Tras
 
 
 util::Status UsersResource_MessagesResource_TrashMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1510,7 +1510,7 @@ UsersResource_MessagesResource_UntrashMethod::~UsersResource_MessagesResource_Un
 
 
 util::Status UsersResource_MessagesResource_UntrashMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1549,7 +1549,7 @@ UsersResource_MessagesResource_AttachmentsResource_GetMethod::~UsersResource_Mes
 
 
 util::Status UsersResource_MessagesResource_AttachmentsResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1589,7 +1589,7 @@ UsersResource_SettingsResource_GetAutoForwardingMethod::~UsersResource_SettingsR
 
 
 util::Status UsersResource_SettingsResource_GetAutoForwardingMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1618,7 +1618,7 @@ UsersResource_SettingsResource_GetImapMethod::~UsersResource_SettingsResource_Ge
 
 
 util::Status UsersResource_SettingsResource_GetImapMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1647,7 +1647,7 @@ UsersResource_SettingsResource_GetPopMethod::~UsersResource_SettingsResource_Get
 
 
 util::Status UsersResource_SettingsResource_GetPopMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1676,7 +1676,7 @@ UsersResource_SettingsResource_GetVacationMethod::~UsersResource_SettingsResourc
 
 
 util::Status UsersResource_SettingsResource_GetVacationMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1706,7 +1706,7 @@ UsersResource_SettingsResource_UpdateAutoForwardingMethod::~UsersResource_Settin
 
 
 util::Status UsersResource_SettingsResource_UpdateAutoForwardingMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1736,7 +1736,7 @@ UsersResource_SettingsResource_UpdateImapMethod::~UsersResource_SettingsResource
 
 
 util::Status UsersResource_SettingsResource_UpdateImapMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1766,7 +1766,7 @@ UsersResource_SettingsResource_UpdatePopMethod::~UsersResource_SettingsResource_
 
 
 util::Status UsersResource_SettingsResource_UpdatePopMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1796,7 +1796,7 @@ UsersResource_SettingsResource_UpdateVacationMethod::~UsersResource_SettingsReso
 
 
 util::Status UsersResource_SettingsResource_UpdateVacationMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1829,7 +1829,7 @@ UsersResource_SettingsResource_FiltersResource_CreateMethod::~UsersResource_Sett
 
 
 util::Status UsersResource_SettingsResource_FiltersResource_CreateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1859,7 +1859,7 @@ UsersResource_SettingsResource_FiltersResource_DeleteMethod::~UsersResource_Sett
 
 
 util::Status UsersResource_SettingsResource_FiltersResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1894,7 +1894,7 @@ UsersResource_SettingsResource_FiltersResource_GetMethod::~UsersResource_Setting
 
 
 util::Status UsersResource_SettingsResource_FiltersResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1928,7 +1928,7 @@ UsersResource_SettingsResource_FiltersResource_ListMethod::~UsersResource_Settin
 
 
 util::Status UsersResource_SettingsResource_FiltersResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1959,7 +1959,7 @@ UsersResource_SettingsResource_ForwardingAddressesResource_CreateMethod::~UsersR
 
 
 util::Status UsersResource_SettingsResource_ForwardingAddressesResource_CreateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -1989,7 +1989,7 @@ UsersResource_SettingsResource_ForwardingAddressesResource_DeleteMethod::~UsersR
 
 
 util::Status UsersResource_SettingsResource_ForwardingAddressesResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2024,7 +2024,7 @@ UsersResource_SettingsResource_ForwardingAddressesResource_GetMethod::~UsersReso
 
 
 util::Status UsersResource_SettingsResource_ForwardingAddressesResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2058,7 +2058,7 @@ UsersResource_SettingsResource_ForwardingAddressesResource_ListMethod::~UsersRes
 
 
 util::Status UsersResource_SettingsResource_ForwardingAddressesResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2089,7 +2089,7 @@ UsersResource_SettingsResource_SendAsResource_CreateMethod::~UsersResource_Setti
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_CreateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2119,7 +2119,7 @@ UsersResource_SettingsResource_SendAsResource_DeleteMethod::~UsersResource_Setti
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2154,7 +2154,7 @@ UsersResource_SettingsResource_SendAsResource_GetMethod::~UsersResource_Settings
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2188,7 +2188,7 @@ UsersResource_SettingsResource_SendAsResource_ListMethod::~UsersResource_Setting
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2219,7 +2219,7 @@ UsersResource_SettingsResource_SendAsResource_PatchMethod::~UsersResource_Settin
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_PatchMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2255,7 +2255,7 @@ UsersResource_SettingsResource_SendAsResource_UpdateMethod::~UsersResource_Setti
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_UpdateMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2290,7 +2290,7 @@ UsersResource_SettingsResource_SendAsResource_VerifyMethod::~UsersResource_Setti
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_VerifyMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2329,7 +2329,7 @@ UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_DeleteMethod::~U
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2370,7 +2370,7 @@ UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_GetMethod::~User
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2411,7 +2411,7 @@ UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_InsertMethod::~U
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_InsertMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2446,7 +2446,7 @@ UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_ListMethod::~Use
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2482,7 +2482,7 @@ UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_SetDefaultMethod
 
 
 util::Status UsersResource_SettingsResource_SendAsResource_SmimeInfoResource_SetDefaultMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2523,7 +2523,7 @@ UsersResource_ThreadsResource_DeleteMethod::~UsersResource_ThreadsResource_Delet
 
 
 util::Status UsersResource_ThreadsResource_DeleteMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2579,7 +2579,7 @@ util::Status UsersResource_ThreadsResource_GetMethod::AppendOptionalQueryParamet
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_ThreadsResource_GetMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2656,7 +2656,7 @@ util::Status UsersResource_ThreadsResource_ListMethod::AppendOptionalQueryParame
   return GmailServiceBaseRequest::AppendOptionalQueryParameters(target);
 }
 util::Status UsersResource_ThreadsResource_ListMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2687,7 +2687,7 @@ UsersResource_ThreadsResource_ModifyMethod::~UsersResource_ThreadsResource_Modif
 
 
 util::Status UsersResource_ThreadsResource_ModifyMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2722,7 +2722,7 @@ UsersResource_ThreadsResource_TrashMethod::~UsersResource_ThreadsResource_TrashM
 
 
 util::Status UsersResource_ThreadsResource_TrashMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
@@ -2757,7 +2757,7 @@ UsersResource_ThreadsResource_UntrashMethod::~UsersResource_ThreadsResource_Untr
 
 
 util::Status UsersResource_ThreadsResource_UntrashMethod::AppendVariable(
-        const StringPiece& variable_name,
+        const string& variable_name,
         const client::UriTemplateConfig& config,
         string* target) {
   if (variable_name == "userId") {
