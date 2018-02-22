@@ -63,4 +63,15 @@ MessagePart::MessagePart(Json::Value* storage)
 // Standard destructor.
 MessagePart::~MessagePart() {
 }
+
+const MessagePartBody MessagePart::get_body() const {
+    const Json::Value& v = Storage("body");
+    return client::JsonValueToCppValueHelper<MessagePartBody >(v);
+}
+
+const client::JsonCppArray<MessagePart > MessagePart::get_parts() const {
+    const Json::Value& v = Storage("parts");
+    return client::JsonValueToCppValueHelper<client::JsonCppArray<MessagePart > >(v);
+}
+
 }  // namespace google_gmail_api
