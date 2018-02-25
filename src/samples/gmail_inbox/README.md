@@ -4,7 +4,7 @@ A program that retrieves messages from Gmail inboxes
 
 ## Prerequisites
 
-See the instructions in the root [README](../../README.md) to build.
+See the instructions in the root [README](../../../README.md) to build.
 In addition, [boost 1.66](http://www.boost.org/users/history/version_1_66_0.html)
 is required for the base64 decoding.
 
@@ -70,7 +70,7 @@ you (your Google Cloud Project), and the user.
     There are 2 sub-commands embedded, namely `retrieve` and `show`.
 
     ```
-    $ bin$ ./gmail_inbox
+    $ bin/gmail_inbox
     Usage:
     1. ./gmail_inbox {retrieve ...}: retrieve messages from Gmail
     2. ./gmail_inbox {show}: show cached messages
@@ -82,7 +82,7 @@ you (your Google Cloud Project), and the user.
     If a file name is specified to save the credential, the A & A process can be avoided for future runs.
 
     ```
-    bin$ ./gmail_inbox retrieve
+    $ bin/gmail_inbox retrieve
     Usage:
     ./gmail_inbox retrieve -s secret_path [-c credential_filename] [-f date_from]  [-t date_to]
     -s: specifying the client secret file in json format
@@ -93,7 +93,3 @@ you (your Google Cloud Project), and the user.
     ```
 
     `show` decrypts the messages saved by the previous `retrieve` run, and prints them onto `stdout`.
-
-## Licensing
-
-* See [LICENSE](../../COPYING.txt)
