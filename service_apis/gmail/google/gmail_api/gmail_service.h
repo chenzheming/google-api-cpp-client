@@ -2914,7 +2914,7 @@ class UsersResource_MessagesResource_ListMethod : public GmailServiceBaseRequest
   UsersResource_MessagesResource_ListMethod(
       const GmailService* _service_,
       client::AuthorizationCredential* _credential_,
-      const StringPiece& user_id, const string *after = nullptr, const string *before = nullptr);
+      const StringPiece& user_id, const string &after = "", const string &before = "");
 
   /**
    * Standard destructor.
@@ -6930,8 +6930,8 @@ class GmailService : public client::ClientService {
       UsersResource_MessagesResource_ListMethod* NewListMethod(
           client::AuthorizationCredential* _credential_,
           const StringPiece& user_id,
-          const string *after = nullptr,
-          const string *before = nullptr) const;
+          const string &after = "",
+          const string &before = "") const;
 
       /**
        * Creates a pager for iterating over incremental result pages.

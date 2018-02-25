@@ -74,4 +74,9 @@ const client::JsonCppArray<MessagePart > MessagePart::get_parts() const {
     return client::JsonValueToCppValueHelper<client::JsonCppArray<MessagePart > >(v);
 }
 
+const client::JsonCppArray<MessagePartHeader > MessagePart::get_headers() const {
+    const Json::Value& v = Storage("headers");
+    return client::JsonValueToCppValueHelper<client::JsonCppArray<MessagePartHeader > >(v);
+}
+
 }  // namespace google_gmail_api
